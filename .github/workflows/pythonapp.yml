@@ -35,7 +35,7 @@ jobs:
       run: |
         pip install pytest
         export YAETOS_JOBS_HOME=/home/runner/work/yaetos_jobs_testing/yaetos_jobs_testing  # update from stock setup. TODO: find cleaner way
-        # export YAETOS_JOBS_HOME=/home/runner/work/yaetos_jobs/yaetos_jobs  # TODO: find cleaner way
+        # export YAETOS_JOBS_HOME=/home/runner/work/yaetos_jobs/yaetos_jobs  # version from stock setup, to be updated. TODO: find cleaner way
         export PYTHONPATH=$YAETOS_JOBS_HOME:$PYTHONPATH
         pytest
     - name: Lint with flake8
