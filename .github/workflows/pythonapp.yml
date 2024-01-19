@@ -31,6 +31,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r conf/requirements_extra.txt
         pip install yaetos
+        pip install py4j
     - name: Test with pytest
       run: |
         pip install pytest
