@@ -1,3 +1,4 @@
+# Instructions: in the YAETOS_JOBS_HOME path below, update yaetos_jobs to the name of your repo (for both occurences)
 name: CI
 
 on: [push]
