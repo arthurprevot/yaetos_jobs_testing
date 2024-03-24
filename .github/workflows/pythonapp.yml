@@ -10,7 +10,7 @@ jobs:
 
     steps:
     # Setup close to EMR7.0.0 (same python, same spark versions)
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
@@ -34,9 +34,9 @@ jobs:
         pip install yaetos
     - name: Test with pytest
       run: |
-        pip install pytest
         export YAETOS_JOBS_HOME=/home/runner/work/yaetos_jobs_testing/yaetos_jobs_testing  # update from stock setup. TODO: find cleaner way
         # export YAETOS_JOBS_HOME=/home/runner/work/yaetos_jobs/yaetos_jobs  # version from stock setup, to be updated. TODO: find cleaner way
+        pip install pytest==7.4.4  # pb with 8.0.0
         export PYTHONPATH=$YAETOS_JOBS_HOME:$PYTHONPATH
         pytest
     - name: Lint with flake8
